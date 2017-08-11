@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body>
+	<script type="text/javascript">
+		var getSum = function(start, end){
+			var sum = 0;
+			for(var i=start; i<=end; i=i+1){
+				sum = sum + i;
+			}
+			return sum;
+		};
+
+		var start = 1;
+		var end = 10;
+		var sum = getSum(start, end);
+		console.log(start + '부터 ' + end + '까지의 합계 = ' + sum);
+	</script>
+</body>
+</html>

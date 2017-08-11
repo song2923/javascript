@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배열 요소 수정</title>
+    
+</head>
+<body>
+	<script type="text/javascript">
+		var arr = [true, 100, 'eight'];
+
+		arr[6] = null;
+		arr[10] = undefined;
+		arr.push(true);
+		arr[arr.length] = 'update';
+		console.log('length = ' + arr.length, arr);
+
+		arr[0] = 'update';
+		console.log('length = ' + arr.length, arr);
+
+		arr.length = 100;
+		arr.push('ten');
+		console.log('length = ' + arr.length, arr);
+	</script>
+</body>
+</html>
+
