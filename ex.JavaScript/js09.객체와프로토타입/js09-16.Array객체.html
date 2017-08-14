@@ -6,7 +6,33 @@
 	
 </head>
 <body>
+	<script type="text/javascript">
+		var ary1 = new Array('가', '나', '다', '라', '마');
+		var ary2 = new Array();
+		var ary3 = new Array(10);
 
+		console.log(ary1.length);
+		console.log(ary1.toString());
+		console.log(ary1.join('/'));
+
+		console.log(ary1.concat(ary2));
+		console.log(ary1);
+
+		console.log(ary1.splice(1,2));
+		console.log(ary1);
+
+		console.log(ary1.splice(1,2, '바', '사'));
+		console.log(ary1);
+
+		console.log(ary1.sort());
+		console.log(ary1);
+
+		console.log(ary1.reverse());
+		console.log(ary1);
+
+		console.log(ary1.push('Kondo'));
+		console.log(ary1);
+	</script>
 </body>
 </html>
 

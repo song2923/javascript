@@ -6,6 +6,55 @@
     
 </head>
 <body>
+	<script type="text/javascript">
+		var foo = {
+			name : 'foo',
+			age : 30,
+			array : [1,4,5,5],
+			run : function(){return this.name;}
+		};
 
+		console.log(foo.name);
+		console.log(foo.age);
+		console.log(foo.nickname);
+
+		console.log(foo['name']);
+		console.log(foo['age']);
+		console.log(foo['nickname']);
+
+		foo.name = 'bar';
+		foo.age = 50;
+
+		foo.gender;
+		foo.nickname;
+		
+		delete foo.gender;
+		delete foo.nickname;
+
+		for(var i in foo){
+			console.log(typeof i, i + ' : ' + foo[i], typeof foo[i]);
+		}
+
+		// 함수를 제외한 열거
+		for(var i in foo){
+			if(typeof foo[i] != 'function'){
+				console.log(foo[i]);
+			}
+		}
+
+		// 배열을 제외한 열거
+		for(var i in foo){
+			if(typeof foo[i] != 'object'){
+				console.log(foo[i]);
+			}
+		}
+
+		// 배열만 열거
+		for(var i in foo){
+			if(typeof foo[i] == 'object' && foo[i].hasOwnProperty('length')){
+				console.log(foo[i]);
+			}
+		}
+	</script>
 </body>
 </html>

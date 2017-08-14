@@ -6,7 +6,28 @@
 	
 </head>
 <body>
+	<script type="text/javascript">
+		var obj = {
+			name : 'foo',
+			age : 30,
+			array : [1,2,4],
+			func : function(x,y){return x+y;}
+		};
 
+		console.log(obj);
+
+		function Ninja(){
+			this.swung = true;
+		}
+		
+		var ninja = new Ninja();
+		Ninja.prototype.swingSword = function(){
+			return this.swung;
+		};
+
+		console.log(ninja);
+		console.log(Ninja.prototype);
+	</script>
 </body>
 </html>
 
