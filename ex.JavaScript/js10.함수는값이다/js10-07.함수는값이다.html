@@ -7,7 +7,41 @@
 
 </head>
 <body>
+	<script type="text/javascript">
+		var plus  = function(a,b){
+			return a+b;
+		};
+		console.log(plus(1,2));
 
+		var obj = {
+			add : function(a,b){
+				return a+b;
+			}
+		};
+		console.log(obj.add(2,3));
+
+		var arr = [273, plus];
+		console.log(arr[1](3,4));
+
+		var alarm = function(func){
+			console.log('alarm start');
+			func();
+			console.log('alarm end');
+		};
+		alarm(
+			function(){
+				console.log('매개변수로 함수 사용');
+			}
+		);
+
+		var doWork = function(x){
+			return function calculate(y){return x+y;};
+		}
+		
+		var func = doWork(5);
+		console.log(func(6));
+
+	</script>
 </body>
 </html>
 

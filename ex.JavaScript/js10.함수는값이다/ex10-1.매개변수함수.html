@@ -7,7 +7,19 @@
 
 </head>
 <body>
+	<script type="text/javascript">
+		var alarm = function(func){
+			console.log('alarm start');
+			func();
+			console.log('alarm end');
+		};
+		
+		var f = function(){
+			console.log('매개변수로 함수 사용');
+		};
 
+		alarm(f);
+	</script>
 </body>
 </html>
 

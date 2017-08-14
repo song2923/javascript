@@ -6,6 +6,21 @@
     
 </head>
 <body>
+	<script type="text/javascript">
+		var foo = function(name){
+			var mesg = 'This is the immediate function --> ' + name;
 
+			console.log(mesg);
+			alert(mesg);
+		};
+		foo('bar');
+
+		(function(name){
+			var mesg = 'This is the immediate function --> ' + name;
+
+			console.log(mesg);
+			alert(mesg);
+		})('foo');
+	</script>
 </body>
 </html>
