@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style></style>
-	
+	<script type="text/javascript">
+		var MYAPP = {timer : null};
+
+		window.onload = function(){
+			MYAPP.timer = window.setTimeout(
+				function(){
+					var dat = new Date();
+					document.getElementById('result').innerHTML = dat.toLocaleTimeString();
+				},
+				3000
+				);
+		};
+	</script>
 </head>
 
 <body>
