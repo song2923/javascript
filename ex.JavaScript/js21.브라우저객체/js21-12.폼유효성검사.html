@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    
+    <script type="text/javascript">
+        window.onload = function(){
+            document.getElementById('fm').onsubmit(event){
+                var fmt = document.fm;
+
+                if(!fmt.text.value){
+                    window.alert('text가 비었음');
+                    fm.text.focus();
+                    return false;
+                }
+
+                var checkboxs =document.querySelectorAll('input[name="checkbox"]:checked');
+                if(checkboxs.length == 0){
+                    window.alert('checkbox가 비었음');
+                    fmt.checkbox[0].focus();
+                    return false;
+                }
+                return true;
+            };
+        }
+    </script>
 </head>
 <body>
 
